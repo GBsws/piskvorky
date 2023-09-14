@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    }
+
+body{
+    color:#ffffff;
+    /* background-repeat: no-repeat; */
+    position:relative;
+}
+main{
+    background: linear-gradient(to bottom,#615dad, #ffc8da);
+}
+.game__card{
+    background-color: #283e50;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width:40vw;
+    position:absolute;
+    left:30%;
+}
+.game__img{
+    width:100%;
+}
+img{
+    width:100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.game__header{
+    font-family:'Lobster';
+    padding-bottom:15px;
+}
+.game__text{
+    text-align: center;
+    padding:15px;
+}
+.game__button{
+    display:flex; 
+    flex-direction:column;
+    color:#ffffff;
+    padding:10px 0;
+    border-color:#283e50;
+}
+.game__button--pravidla{
+    background-color:#1fcca4;
+}
+.game__button--pravidla:hover{
+   background-color: #1cbb96;
+}
+.game__button--hrat{
+    background-color:#0197f6;
+}
+.game__button--hrat:hover{
+    background-color:#0090e9;
+}
