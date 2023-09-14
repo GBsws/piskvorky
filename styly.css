@@ -5,22 +5,17 @@
 
 body{
     color:#ffffff;
-    /* background-repeat: no-repeat; */
-    position:relative;
-}
-main{
     background: linear-gradient(to bottom,#615dad, #ffc8da);
+    background-repeat:no-repeat
 }
 .game__card{
     background-color: #283e50;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    max-width:40vw;
-    position:absolute;
-    left:30%;
-}
-.game__img{
-    width:100%;
+    width:30vw;
+    height:30wh;
+    position:relative; 
+    left:35%;
 }
 img{
     width:100%;
