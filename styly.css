@@ -6,15 +6,19 @@
 body{
     color:#ffffff;
     background: linear-gradient(to bottom,#615dad, #ffc8da);
-    background-repeat:no-repeat
+    background-attachment:fixed;
+    display:flex;
+    justify-content: center;
 }
 .game__card{
-    background-color: #283e50;
+    
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width:30vw;
-    position:relative; 
-    left:35%;
+    /* position:relative;  */
+    display:flex;
+    flex-direction:column;
+    align-content: center;
 }
 img{
     width:100%;
@@ -23,27 +27,32 @@ img{
 }
 .game__header{
     font-family:'Lobster';
-    padding-bottom:15px;
+    padding-bottom:5px;
+    font-size:2.5rem;
 }
 .game__text{
     text-align: center;
     padding:15px;
+    background-color: #283e50;
 }
 .game__button{
     display:flex; 
     flex-direction:column;
     color:#ffffff;
-    padding:10px 0;
-    border-color:#283e50;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #283e50;
 }
 .game__button--pravidla{
     background-color:#1fcca4;
+    padding:10px;
 }
 .game__button--pravidla:hover{
    background-color: #1cbb96;
 }
 .game__button--hrat{
     background-color:#0197f6;
+    padding:10px;
 }
 .game__button--hrat:hover{
     background-color:#0090e9;
