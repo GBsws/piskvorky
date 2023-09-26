@@ -3,7 +3,7 @@
     box-sizing:border-box;
     }
 
-body{
+.game__wrapper{
     color:#ffffff;
     background: linear-gradient(to bottom,#615dad, #ffc8da);
     background-attachment:fixed;
@@ -11,16 +11,14 @@ body{
     justify-content: center;
 }
 .game__card{
-    
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width:30vw;
-    /* position:relative;  */
     display:flex;
     flex-direction:column;
     align-content: center;
 }
-img{
+.game__intro{
     width:100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -56,4 +54,60 @@ img{
 }
 .game__button--hrat:hover{
     background-color:#0090e9;
+}
+
+/* ------------------------- Ukol 2 ----------------------------------- */
+.hra__card{
+    background: linear-gradient(to bottom,#615dad, #ffc8da);
+    background-attachment:fixed;
+    
+}
+.hra__container{
+    max-width: 80vmin;
+    /* display: flex; */
+    position:relative;
+    left: 20%;
+    
+}
+.hra__title{
+    font-family:'Lobster';
+    font-size: 3rem;
+    color:#ffffff;
+    text-align:center;
+    margin:15px;
+}
+.hra__bar{
+    display:flex;
+    justify-content: space-between;
+}
+.hra__canvas{
+  display:grid; 
+  grid-template-columns:repeat(10, 1fr); 
+  border:2px solid black;
+  
+}
+.hra__button{
+    opacity:0.6;
+    /* width:80vmin;
+    height:80vmin; */
+}
+.hra__canvas
+/* .hra__button{
+    padding: 10px;
+    border:1px solid black;
+    gap:0px;
+} */
+
+div.hra__links{
+    margin:20px;
+}
+.hra__links--home{
+    background-color:#1fcca4;
+    padding: 7px;
+    border-radius:4px;
+}
+.hra__links--restart{
+    background-color:#0197f6;
+    padding: 7px;
+    border-radius:4px;
 }
