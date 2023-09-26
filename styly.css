@@ -67,24 +67,34 @@
 }
 .hra__container{
     max-width: 80vmin;
-    /* position:relative;
-    left: 20%; */
-    
+    max-height:80vmin;
 }
 .hra__title{
     font-family:'Lobster';
-    font-size: 4rem;
+    font-size: 3rem;
     color:#ffffff;
     text-align:center;
-    margin:15px;
+    margin:15px 15px 0px 15px;
 }
 .hra__bar{
     display:flex;
     justify-content: space-between;
+    align-items:center;
 }
 .hra__player{
-   
+  color:#ffffff; 
 }
+.hra__circle{
+    border:3px solid #ffffff;
+    width:20px;
+    height:20px;
+    border-radius:100%;
+    margin:4px;
+    display:inline-block;
+    vertical-align:middle; 
+    color:#ffffff;
+    margin-bottom: 6px;
+  }
 .hra__canvas{
   display:inline-grid; 
   grid-template-columns:repeat(10, 1fr); 
@@ -93,8 +103,8 @@
 .hra__button{
     opacity:0.4;
     border:1px solid black;
-    width:8vmin;
-    height:8vmin;
+    width:7vmin;
+    height:7vmin;
 }
 .hra__button:hover{
     opacity: 0.65;
