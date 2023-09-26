@@ -64,7 +64,6 @@
 }
 .hra__container{
     max-width: 80vmin;
-    /* display: flex; */
     position:relative;
     left: 20%;
     
@@ -83,21 +82,14 @@
 .hra__canvas{
   display:grid; 
   grid-template-columns:repeat(10, 1fr); 
-  border:2px solid black;
-  
+  border:1px solid #283e50; 
 }
 .hra__button{
-    opacity:0.6;
-    /* width:80vmin;
-    height:80vmin; */
-}
-.hra__canvas
-/* .hra__button{
-    padding: 10px;
+    opacity:0.4;
     border:1px solid black;
-    gap:0px;
-} */
-
+    width:8vmin;
+    height:8vmin;
+}
 div.hra__links{
     margin:20px;
 }
