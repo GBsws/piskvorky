@@ -60,17 +60,20 @@
 .hra__card{
     background: linear-gradient(to bottom,#615dad, #ffc8da);
     background-attachment:fixed;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
     
 }
 .hra__container{
     max-width: 80vmin;
-    position:relative;
-    left: 20%;
+    /* position:relative;
+    left: 20%; */
     
 }
 .hra__title{
     font-family:'Lobster';
-    font-size: 3rem;
+    font-size: 4rem;
     color:#ffffff;
     text-align:center;
     margin:15px;
@@ -79,8 +82,11 @@
     display:flex;
     justify-content: space-between;
 }
+.hra__player{
+   
+}
 .hra__canvas{
-  display:grid; 
+  display:inline-grid; 
   grid-template-columns:repeat(10, 1fr); 
   border:1px solid #283e50; 
 }
@@ -89,6 +95,9 @@
     border:1px solid black;
     width:8vmin;
     height:8vmin;
+}
+.hra__button:hover{
+    opacity: 0.65;
 }
 div.hra__links{
     margin:20px;
