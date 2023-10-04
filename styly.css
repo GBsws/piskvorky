@@ -57,13 +57,24 @@
 }
 
 /* ------------------------- Ukol 2 ----------------------------------- */
+/* k body - dle oficialniho reseni
+ display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--color-1);
+  background-color: rgba(255, 255, 255, 0.4);
+  max-width: 80vmin;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+
 .hra__card{
     background: linear-gradient(to bottom,#615dad, #ffc8da);
     background-attachment:fixed;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    
+    min-height:100vh;
+    padding:1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .hra__container{
     max-width: 80vmin;
@@ -83,7 +94,7 @@
 .hra__player{
   color:#ffffff; 
 }
-.hra__circle{
+/* .hra__circle{
     border:3px solid #ffffff;
     width:20px;
     height:20px;
@@ -93,7 +104,7 @@
     vertical-align:middle; 
     color:#ffffff;
     margin-bottom: 6px;
-  }
+  } */
 .hra__canvas{
   display:inline-grid; 
   grid-template-columns:repeat(10, 1fr); 
@@ -120,4 +131,18 @@ div.hra__links{
     background-color:#0197f6;
     padding: 7px;
     border-radius:4px;
+}
+/* --------------------Ukol 3---------------------- */
+.hra__button--circle{
+ background-image: url(circle_black.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 4vw;
+}
+
+.hra__button--cross{
+background-image: url(cross_black.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 4vw;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hrací plátno</title>
     <link rel="stylesheet" href="styly.css">
+    <script type="module" src="hra.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -13,18 +14,18 @@
     <main class="hra__container">
         <h1 class="hra__title">Piškvorky</h1>
         <div class="hra__bar">
-            <h2 class="hra__player">HRAJE: <span class="hra__circle"></span></h2>
+             <h2 class="hra__player">HRAJE: <img src='podklady/circle.svg' id="game_icon"></h2>   
             <div class="hra__links">
                 <a href="index.html">
                     <img class="hra__links hra__links--home" src="podklady/home.svg" alt="tlacitko domu">
                 </a>
                 <a href="hra.html">
-                    <img class="hra__links hra__links--restart" src="podklady/restart.svg" alt="tlacitko restart">
+                    <img class="hra__links hra__links--restart" id="hra__restart" src="podklady/restart.svg" alt="tlacitko restart">
                 </a>
             </div>
         </div>
     <article class="hra__canvas">
-        <button class="hra__button"></button>
+        <button class="hra__button"></button> 
         <button class="hra__button"></button>
         <button class="hra__button"></button>
         <button class="hra__button"></button>
