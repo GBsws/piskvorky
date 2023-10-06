@@ -137,12 +137,12 @@ div.hra__links{
  background-image: url(circle_black.svg);
  background-repeat: no-repeat;
  background-position: center;
- background-size: 4vw;
+ background-size: 70%;
 }
 
 .hra__button--cross{
 background-image: url(cross_black.svg);
 background-repeat: no-repeat;
 background-position: center;
-background-size: 4vw;
+background-size: 70%;
 }
