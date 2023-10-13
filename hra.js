@@ -1,52 +1,67 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4'
 let currentPlayer = 'circle'
 const whoPlays = document.querySelector('#game_icon')
-const btnElement = document.querySelector('hra__button')
+const restartElm= document.querySelector('#hra__restart')
 
 const tah = (event) =>{
     if (currentPlayer === 'circle'){
         event.target.classList.toggle('hra__button--circle')
         currentPlayer = 'cross'
         whoPlays.src = 'cross.svg'
+        event.target.disabled = true
     } else{
         event.target.classList.toggle('hra__button--cross')
         currentPlayer ='circle'
         whoPlays.src = 'circle.svg'
+        event.target.disabled = true
     }
-    event.target.disabled = true
-    
+    poleTlacitek()
 }
-let btnArray = []
-const tahElm = document.querySelectorAll('.hra__button')
-tahElm.forEach(button=>{
-    button.addEventListener('click',tah)
-})
-tahElm.forEach(kostka=>{
-    let sign = kostka.textContent
-    if(sign===''){
-        sign='_'
-    }
-    btnArray.push(sign)
-})
-console.log(tahElm)
-
-const gameFinish = findWinner(btnArray)
-if(gameFinish.src === 'circle_black.svg' || gameFinish.src === 'cross_black.svg'){
-    console.log('Vyhrál', gameFinish)
-} else if (gameFinish==='tie'){
-    console.log ('remiza')
-} else {
-    console.log('Zatim nikdo nevyhrál')
-}
-
-
-
-//--------------------------------------------------------------------
 
 const repeat = (event) => {
     const confirmation = confirm('zahraješ si znovu?');
     if (!confirmation) {
-      event.preventDefault()
-  };
+        event.preventDefault()
+    };
 }
-  document.querySelector('#hra__restart').addEventListener('click', repeat);
+restartElm.addEventListener('click', repeat)
+
+const btnElement = document.querySelectorAll('.hra__button')
+
+btnElement.forEach(button=>{
+    button.addEventListener('click',tah)
+} )
+
+
+const poleTlacitek = ()=> {
+    let fieldArray=[]
+    btnElement.forEach((button)=>{
+    if(button.classList.contains('hra__button--circle')){
+        fieldArray.push('o') 
+    }else if(button.classList.contains('hra__button--cross')){
+        fieldArray.push('x')
+    } else{ 
+        fieldArray.push('_')
+    }
+})
+    }
+    
+const winner = findWinner(fieldArray)
+if(winner === 'o' || winner === 'x'){
+    setTimeout(()=>{
+    alert(`Vyhrál hráč ${winner}.`)
+    },500)
+    setTimeout(()=>{
+      location.reload()
+   },1000)
+   }
+if (winner==='tie'){
+    setTimeout(() =>{
+        alert(`Remíza`)
+    },500)
+    setTimeout(()=>{
+        location.reload()
+    },1000)
+}
+
+ 
