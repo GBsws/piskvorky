@@ -15,7 +15,7 @@ const tah = (event) =>{
         whoPlays.src = 'circle.svg'
         event.target.disabled = true
     }
-
+    poleTlacitek()
 }
 
 const repeat = (event) => {
@@ -47,7 +47,7 @@ const poleTlacitek = ()=> {
     return findWinner(fieldArray)
     }
 
-const winner = poleTlacitek
+const winner = poleTlacitek()
 if(winner === 'o' || winner === 'x'){
     setTimeout(()=>{
     alert(`Vyhrál hráč ${winner}.`)
