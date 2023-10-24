@@ -19,7 +19,7 @@ const tah = (event) =>{
 
 //funkce na vytvoření pole a vkládání jednolivých znaků
 
-const poleTlacitek = ()=> {
+ const poleTlacitek = ()=> {
     let fieldArray=[]
     btnElement.forEach((button)=>{
     if(button.classList.contains('hra__button--circle')){
@@ -32,6 +32,7 @@ const poleTlacitek = ()=> {
 })
 return findWinner(fieldArray)
 }
+
 //časovač na zprávy o tom, kdo vyhrál
 const winner = poleTlacitek()
 if(winner === 'o' || winner === 'x'){
@@ -49,10 +50,8 @@ if (winner==='tie'){
     setTimeout(()=>{
     location.reload()
 },1000)
-if(currentPlayer==='cross'){
-    tahAi(fieldArray)
 }
-}
+tahAi()
 }
 
 //otzka na restar hry
@@ -75,13 +74,13 @@ const tahAi=async()=>{
     headers:{
         'Content-Type':'application/json',
     },
-    body:JSON.stringify({board:fieldArray, player:'x',
+    body:JSON.stringify({board:poleTlacitek, player:'x',
         })
     })
+   
     const data =await response.json();
     const{x,y}=data.position;
     const field = btnElement[x+y*10];
     field.click();
-    }
+}
     
-   
