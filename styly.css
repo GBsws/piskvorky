@@ -139,6 +139,7 @@ div.hra__links{
  background-repeat: no-repeat;
  background-position: center;
  background-size: 70%;
+ animation: anim .2s cubic-bezier(.17,.67,.8,.35);
 }
 
 .hra__button--cross{
@@ -146,4 +147,13 @@ background-image: url(cross_black.svg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: 70%;
+animation: anim .2s cubic-bezier(.17,.67,.8,.35);
+}
+@keyframes anim {
+    0%{
+        background-size:0%;
+    }
+    100%{
+        background-size:75%;
+    }
 }
